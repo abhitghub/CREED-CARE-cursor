@@ -83,7 +83,7 @@ const Navbar = ({ toggleColorMode }) => {
             }}
           >
             <img 
-              src="/logo.jpg" 
+              src={theme.palette.mode === 'dark' ? "/logo-removebg-preview.png" : "/logo.jpg"}
               alt="Creed Care" 
               style={{
                 maxWidth: '200px',
