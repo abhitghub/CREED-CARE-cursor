@@ -22,6 +22,30 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: 'none',
   borderBottom: `1px solid ${theme.palette.divider}`,
   padding: theme.spacing(1, 0),
+  position: 'relative',
+  overflow: 'hidden',
+}));
+
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  justifyContent: 'space-between',
+  position: 'relative',
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    left: '220px', // Adjust this value based on your logo width
+    top: 0,
+    right: 0,
+    bottom: 0,
+    backgroundImage: 'url("/heartbeat.jpeg")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    opacity: theme.palette.mode === 'dark' ? 0.3 : 0.1,
+    zIndex: 0,
+  },
+  '& > *': {
+    position: 'relative',
+    zIndex: 1,
+  },
 }));
 
 const LogoContainer = styled(Box)(({ theme }) => ({
@@ -69,7 +93,7 @@ const Navbar = ({ toggleColorMode }) => {
 
   return (
     <StyledAppBar position="sticky">
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
+      <StyledToolbar>
         {/* Logo Section */}
         <LogoContainer>
           <Box 
@@ -173,7 +197,7 @@ const Navbar = ({ toggleColorMode }) => {
             Sign In
           </Button>
         </Box>
-      </Toolbar>
+      </StyledToolbar>
     </StyledAppBar>
   );
 };
