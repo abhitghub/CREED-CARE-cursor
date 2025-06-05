@@ -28,6 +28,7 @@ import Services from './Services';
 import Logo from './Logo';
 import WelcomeDialog from './WelcomeDialog';
 import ChatBotButton from './ChatBotButton';
+import WhatMakesUsApart from './WhatMakesUsApart';
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(8),
@@ -692,6 +693,9 @@ const LandingPage = () => {
           </Grid>
         </Container>
       </Box>
+
+      {/* What Makes Us Apart Section */}
+      <WhatMakesUsApart />
 
       {/* Pricing Section */}
       <Box 
