@@ -20,8 +20,14 @@ const getDesignTokens = (mode) => ({
     ...(mode === 'light'
       ? {
           primary: {
-            main: '#27ae60',
-            dark: '#219a52',
+            main: '#FFB800',
+            dark: '#E6A500',
+            light: '#FFD54F',
+          },
+          secondary: {
+            main: '#FFA000',
+            dark: '#FF8F00',
+            light: '#FFB74D',
           },
           background: {
             default: '#f8fafc',
@@ -34,8 +40,14 @@ const getDesignTokens = (mode) => ({
         }
       : {
           primary: {
-            main: '#2ecc71',
-            dark: '#27ae60',
+            main: '#FFD700',
+            dark: '#FFB800',
+            light: '#FFE57F',
+          },
+          secondary: {
+            main: '#FFC107',
+            dark: '#FFB300',
+            light: '#FFD54F',
           },
           background: {
             default: '#1a1a1a',
@@ -52,6 +64,17 @@ const getDesignTokens = (mode) => ({
       styleOverrides: {
         root: {
           backgroundImage: 'none'
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            boxShadow: mode === 'dark' 
+              ? '0 6px 20px rgba(255, 215, 0, 0.3)'
+              : '0 6px 20px rgba(255, 184, 0, 0.3)',
+          }
         }
       }
     }

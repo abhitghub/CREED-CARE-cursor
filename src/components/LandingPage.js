@@ -29,6 +29,7 @@ import Logo from './Logo';
 import WelcomeDialog from './WelcomeDialog';
 import ChatBotButton from './ChatBotButton';
 import WhatMakesUsApart from './WhatMakesUsApart';
+import OurJourney from './OurJourney';
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(8),
@@ -223,7 +224,7 @@ const LandingPage = () => {
               >
                 Your Path to Nourishing
                 <Box component="span" sx={{ 
-                  color: '#2e7d32',
+                  color: theme.palette.primary.main,
                   display: 'block',
                   fontSize: { xs: '2.8rem', md: '4rem' },
                   fontWeight: 800
@@ -541,6 +542,9 @@ const LandingPage = () => {
         </Container>
       </Box>
 
+      {/* Our Journey Section */}
+      <OurJourney />
+
       {/* Services Section */}
       <Services />
 
@@ -561,8 +565,8 @@ const LandingPage = () => {
             right: 0,
             height: '100%',
             background: theme.palette.mode === 'dark'
-              ? 'linear-gradient(180deg, rgba(46, 204, 113, 0.05) 0%, rgba(46, 204, 113, 0) 100%)'
-              : 'linear-gradient(180deg, rgba(39, 174, 96, 0.05) 0%, rgba(39, 174, 96, 0) 100%)',
+              ? 'linear-gradient(180deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 215, 0, 0) 100%)'
+              : 'linear-gradient(180deg, rgba(255, 184, 0, 0.05) 0%, rgba(255, 184, 0, 0) 100%)',
             zIndex: 0
           }
         }}
@@ -577,14 +581,14 @@ const LandingPage = () => {
               fontSize: { xs: '2rem', md: '2.5rem' },
               mb: 2,
               background: theme.palette.mode === 'dark'
-                ? 'linear-gradient(45deg, #2ecc71, #27ae60)'
-                : 'linear-gradient(45deg, #27ae60, #219a52)',
+                ? 'linear-gradient(45deg, #FFD700, #FFB800)'
+                : 'linear-gradient(45deg, #FFB800, #FFA000)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
               textShadow: theme.palette.mode === 'dark'
-                ? '0 2px 4px rgba(46, 204, 113, 0.2)'
-                : '0 2px 4px rgba(39, 174, 96, 0.2)'
+                ? '0 2px 4px rgba(255, 215, 0, 0.2)'
+                : '0 2px 4px rgba(255, 184, 0, 0.2)'
             }}
           >
             Why Choose Us

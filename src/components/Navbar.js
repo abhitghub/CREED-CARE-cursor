@@ -36,7 +36,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     top: 0,
     right: 0,
     bottom: 0,
-    backgroundImage: 'url("/heartbeat.jpeg")',
+    backgroundImage: 'url("/drkheartbeat.png")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     opacity: theme.palette.mode === 'dark' ? 0.3 : 0.1,
@@ -72,6 +72,7 @@ const NavButton = styled(Button)(({ theme }) => ({
 
 const navItems = [
   { label: 'About', href: '#about' },
+  { label: 'Our Journey', href: '#our-journey' },
   { label: 'Features', href: '#features' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
