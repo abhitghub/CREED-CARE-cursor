@@ -183,7 +183,7 @@ const LandingPage = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
-          opacity: theme.palette.mode === 'dark' ? 0.5 : 0.7,
+          opacity: theme.palette.mode === 'dark' ? 0.7 : 0.9,
           zIndex: 0
         },
         '&::after': {
@@ -194,8 +194,8 @@ const LandingPage = () => {
           right: 0,
           bottom: 0,
           background: theme.palette.mode === 'dark'
-            ? 'linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6))'
-            : 'linear-gradient(45deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6))',
+            ? 'linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4))'
+            : 'linear-gradient(45deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4))',
           zIndex: 1
         }
       }}>
@@ -708,7 +708,8 @@ const LandingPage = () => {
           py: 8,
           backgroundColor: theme.palette.mode === 'dark' 
             ? 'background.paper' 
-            : 'white'
+            : 'white',
+          position: 'relative'
         }}
       >
         <Container maxWidth="lg">
@@ -974,8 +975,8 @@ const LandingPage = () => {
                     fontSize: { xs: '2.5rem', md: '3rem' },
                     mb: 3,
                     background: theme.palette.mode === 'dark'
-                      ? 'linear-gradient(45deg, #2ecc71, #27ae60)'
-                      : 'linear-gradient(45deg, #27ae60, #219a52)',
+                      ? 'linear-gradient(45deg, #FFD700, #FFA000)'
+                      : 'linear-gradient(45deg, #FFB800, #FF8C00)',
                     backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',
                     color: 'transparent',
@@ -1003,7 +1004,7 @@ const LandingPage = () => {
                     flexWrap: 'wrap',
                     '& svg': {
                       fontSize: '2rem',
-                      color: theme.palette.primary.main
+                      color: theme.palette.mode === 'dark' ? '#FFD700' : '#FFB800'
                     }
                   }}
                 >
@@ -1055,13 +1056,13 @@ const LandingPage = () => {
                       mb: 3,
                       '& .MuiOutlinedInput-root': {
                         '& fieldset': {
-                          borderColor: 'rgba(46, 204, 113, 0.3)',
+                          borderColor: 'rgba(255, 184, 0, 0.3)',
                         },
                         '&:hover fieldset': {
-                          borderColor: 'rgba(46, 204, 113, 0.5)',
+                          borderColor: 'rgba(255, 184, 0, 0.5)',
                         },
                         '&.Mui-focused fieldset': {
-                          borderColor: '#2ecc71',
+                          borderColor: '#FFB800',
                         },
                         backgroundColor: theme.palette.mode === 'dark' 
                           ? 'rgba(45, 45, 45, 0.9)'
@@ -1099,21 +1100,20 @@ const LandingPage = () => {
                   />
                   <Button 
                     variant="contained" 
-                    color="primary"
                     fullWidth
                     size="large"
                     sx={{
                       mt: 2,
                       py: 1.5,
                       borderRadius: '50px',
-                      background: 'linear-gradient(45deg, #2ecc71, #27ae60)',
+                      background: 'linear-gradient(45deg, #FFD700, #FFA000)',
                       textTransform: 'none',
                       fontSize: '1.1rem',
                       fontWeight: 500,
-                      boxShadow: '0 4px 20px rgba(46, 204, 113, 0.25)',
+                      boxShadow: '0 4px 20px rgba(255, 184, 0, 0.25)',
                       '&:hover': {
-                        background: 'linear-gradient(45deg, #27ae60, #219a52)',
-                        boxShadow: '0 6px 25px rgba(46, 204, 113, 0.35)',
+                        background: 'linear-gradient(45deg, #FFB800, #FF8C00)',
+                        boxShadow: '0 6px 25px rgba(255, 184, 0, 0.35)',
                         transform: 'translateY(-2px)',
                       },
                       transition: 'all 0.3s ease'
